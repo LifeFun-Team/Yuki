@@ -1,0 +1,27 @@
+{
+  "name": "yuki-nagato",
+  "version": "1.0.0",
+  "description": "",
+  "main": "shard.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node shard.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "12.x"
+  },
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "@lavacord/discord.js": "^0.0.7",
+    "lavacord": "^1.1.9",
+    "mongoose": "^5.9.20",
+    "moment": "^2.27.0",
+    "moment-duration-format": "^2.2.2",
+    "canvas": "^2.6.1",
+    "gifencoder": "^2.0.1",
+    "@megavasiliy007/sdc-api": "github:vladciphersky/sdc-api",
+    "aki-api": "^5.0.0"
+  }
+}
