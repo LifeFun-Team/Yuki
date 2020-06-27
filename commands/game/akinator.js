@@ -32,7 +32,7 @@ const quiz = new MessageEmbed()
 .setDescription(`${aki.currentStep + 1}. **${aki.question}** (${Math.round(Number.parseInt(aki.progress, 10))}%)\n[${aki.answers.join('/')}${aki.currentStep > 0 ? `/back` : ''}/end]`)
 await message.say(quiz);
 				const filter = res => res.author.id === message.author.id && answers.includes(res.content.toLowerCase());
-				const msgs = await message.channel.awaitMessages(filter, {max: 1, time: 30000});
+				const msgs = await message.channel.awaitMessages(filter, {max: 1, time: 60000});
 				if(!msgs.size) {win = 'time'; break;}
 				const choice = msgs.first().content.toLowerCase();
 				if(choice === 'end') {
