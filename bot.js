@@ -1,7 +1,7 @@
 const { Client, Collection, MessageEmbed, WebhookClient } = require("discord.js");
 const mongoose = require("mongoose");
 const { readdir, readdirSync } = require("fs");
-const bot = new Client({ disableMention: 'all' });
+const bot = new Client({ disableMentions: 'all' });
 bot.options.ws.properties.$browser = "Discord Android";
 
 //mongoose.connect("mongodb+srv://dope:duck3322@yukibd-d7dl4.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
