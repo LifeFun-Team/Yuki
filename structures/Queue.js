@@ -1,5 +1,3 @@
-const { ms, s, m, h } = require("./time.js");
-
 module.exports = class Queue {
     constructor(bot, data = {}) {
         this.bot = bot;
