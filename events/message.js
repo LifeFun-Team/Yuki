@@ -20,8 +20,8 @@ module.exports = async (bot, message) => {
   if(!message.channel.permissionsFor(message.guild.me).has('ADD_REACTIONS')) return message.say("У меня нету права `Добавлять реакции`");
 
   const limitFlag = `${message.author.id}-${cmd.help.name}`;
-  const ddos = `\`${message.author.tag}(${message.author.id}) ${cmd.help.name}\``;
-  if(cooldownCache.has(limitFlag)) {return message.react('⏱️'), bot.channels.cache.get("719241427292520509").send(ddos)}
+  const ddos = `\`${message.guild.name}|${message.guild.id}${message.author.tag}|${message.author.id}\``;
+  if(cooldownCache.has(limitFlag)) {return message.react('⏱️'), bot.rest.api.channels("719241427292520509").messages.post({data: {content: ddos}});}
   
   cooldownCache.add(limitFlag);
   setTimeout(()=>{cooldownCache.delete(limitFlag)}, cmd.help.cooldown*1000);
