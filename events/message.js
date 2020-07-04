@@ -13,7 +13,7 @@ module.exports = async (bot, message) => {
   const cmd = bot.commands.get(command) || bot.commands.find(c => c.help.aliases.includes(command));
   if(!cmd) return;
   if(cmd.help.ownerOnly && !owners.includes(message.author.id)) return;
-  if(cmd.help.sponsor && !sponsors.includes(message.guild.id)) return message.say("Эта бонусная функция которая доступна только спонсорским серверам.");
+  if(cmd.help.sponsor && !sponsors.includes(message.guild.id) || !owners.includes(message.author.id)) return message.say("Эта бонусная функция которая доступна только спонсорским серверам.");
   if(!message.channel.permissionsFor(message.guild.me).has('SEND_MESSAGES')) return;
   if(!message.channel.permissionsFor(message.guild.me).has('EMBED_LINKS')) return message.say("У меня нету права `Встраивать ссылки`");
   if(!message.channel.permissionsFor(message.guild.me).has('USE_EXTERNAL_EMOJIS')) return message.say("У меня нету права `Использовать внешние эмодзи`");
