@@ -13,7 +13,6 @@ if(!args[0]) {
    .addField('❯ Реакции', list("role"))
    .addField('❯ Мини игры', list("game"))
    .addField('❯ Изображение', list("image"))
-   .addField(`${music} Музыка`, list("music"))
    if(owners.includes(message.author.id)) embed.addField(`${owner} Разработчикам`, list("owner"))
    embed.addField('Полезные ссылки', `[\`Пригласить\`](${await bot.generateInvite(3459168)}) | [\`Сервер поддержки\`](https://discord.gg/XDkFTMK) | [\`SD.C\`](https://bots.server-discord.com/618162110710677524)`)
    .setFooter(`${prefix}help [Команда]`)
