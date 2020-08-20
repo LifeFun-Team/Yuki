@@ -1,5 +1,4 @@
-const { RichEmbed } = require('discord.js'),
-      words = require('../../json/balda')
+const words = require('../../json/balda')
 
 exports.run = async (bot, message, args) => {
       
