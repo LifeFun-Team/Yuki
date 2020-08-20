@@ -1,5 +1,4 @@
-const words = require('../../json/balda')
-
+const words = require('../../structures/balda');
 exports.run = async (bot, message, args) => {
       
 		this.playing = new Set();
