@@ -39,6 +39,5 @@ exports.help = {
   usage: '[Команда]',
   group: 'util',
   ownerOnly: false,
-  sponsor: false,
   cooldown: 5
 }
