@@ -3,7 +3,7 @@ exports.run = async (bot, message, args) => {
 
 if(!message.channel.permissionsFor(message.guild.me).has('ATTACH_FILES')) return message.say(`У меня нету права \`Прикреплять файлы\``);
 let member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member || message.id;
-let URL = member.user.avatarURL({dynamic: true, size: 2048}      
+let URL = member.user.avatarURL({dynamic: true, size: 2048});      
 const avatar = await loadImage(URL);
       const canvas = createCanvas(avatar.width, avatar.height);
       const attachment = canvas.toBuffer();
