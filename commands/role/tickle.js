@@ -12,7 +12,7 @@ let member = message.guild.member(message.mentions.users.first());
 const body = await fetch("https://nekos.life/api/v2/img/tickle").then(r => r.json()).then(r => r.url);
  const embed = new MessageEmbed()
   .setColor(invisible)
-   .setDescription(`${message.author} пощекотал ${member.user}`)
+   .setDescription(`${message.author} пощекотал(а) ${member.user}`)
     .setImage(body)
      message.channel.send(embed)
  };
