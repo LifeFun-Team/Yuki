@@ -8,7 +8,7 @@ if(!message.channel.permissionsFor(message.guild.me).has("EMBED_LINKS")) return 
   
 let embed = new MessageEmbed()
 .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
-.setDescription("**[Аватар]("+member.user.avatarURL({dynamic: true, size: 2048})+")**: " + `${member.user.tag}`)
+.setDescription("[${member.user.tag}]("+member.user.avatarURL({dynamic: true, size: 2048})+"): ")
 .setImage(member.user.avatarURL({dynamic: true, size: 2048}))
 .setColor(color)
 .setTimestamp();
