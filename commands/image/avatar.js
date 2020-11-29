@@ -2,8 +2,8 @@ const { MessageEmbed } = require('discord.js');
 const { color } = require('../../config.js');
 exports.run = async (bot, message, args) => {
 
-let member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member || message.id;
-message.channel.send({ files: [{ attachment: member, name: `avatar.${member.avatar?.startWith('_a') ? 'gif' : 'jpeg'}`}] })
+let user = message.mentions.users.first() || message.author;
+message.channel.send({ files: [{ attachment: user.avatarURL({dynamic: true, size: 2048}), name: `avatar.${member.avatar?.startWith('_a') ? 'gif' : 'jpeg'}`}] })
 
 };
 
