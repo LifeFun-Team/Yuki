@@ -3,7 +3,7 @@ const { color } = require('../../config.js');
 exports.run = async (bot, message, args) => {
 
 let user = message.mentions.users.first() || message.author;
-message.channel.send({ files: [{ attachment: user.avatarURL({dynamic: true, size: 2048}), name: `avatar.${member.avatar?.startWith('_a') ? 'gif' : 'jpeg'}`}] })
+message.channel.send({ files: [{ attachment: user.avatarURL({dynamic: true, size: 2048}), name: `avatar.${user.avatar?.startWith('_a') ? 'gif' : 'jpeg'}`}] })
 
 };
 
