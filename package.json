@@ -21,7 +21,6 @@
     "moment-duration-format": "^2.2.2",
     "canvas": "^2.6.1",
     "gifencoder": "^2.0.1",
-    "@megavasiliy007/sdc-api": "github:vladciphersky/sdc-api",
     "aki-api": "^5.0.0"
   }
 }
