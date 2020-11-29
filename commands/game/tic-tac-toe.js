@@ -69,6 +69,5 @@ exports.help = {
   usage: '@Пользователь',
   group: 'game',
   ownerOnly: false,
-  sponsor: false,
   cooldown: 10
 }
