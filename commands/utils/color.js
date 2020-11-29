@@ -23,6 +23,5 @@ exports.help = {
   usage: 'цвет в формате hex',
   group: 'util',
   ownerOnly: false,
-  sponsor: false,
   cooldown: 5,
 }
