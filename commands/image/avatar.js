@@ -2,7 +2,7 @@ const { createCanvas, loadImage } = require('canvas');
 exports.run = async (bot, message, args) => {
 
 if(!message.channel.permissionsFor(message.guild.me).has('ATTACH_FILES')) return message.say(`У меня нету права \`Прикреплять файлы\``);
-let member = msg.mentions.members.first() || msg.guild.members.cache.get(args[0]) || msg.member || msg.id;
+let member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member || message.id;
       const avatar = await loadImage(URL);
       const canvas = createCanvas(avatar.width, avatar.height);
       const attachment = canvas.toBuffer();
