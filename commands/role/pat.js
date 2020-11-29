@@ -24,6 +24,5 @@ exports.help = {
   usage: '@Пользователь',
   group: 'role',
   ownerOnly: false,
-  sponsor: false,
   cooldown: 5
 }
