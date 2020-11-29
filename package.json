@@ -14,13 +14,10 @@
   },
   "dependencies": {
     "discord.js": "^12.2.0",
-    "@lavacord/discord.js": "^0.0.7",
-    "lavacord": "^1.1.9",
     "mongoose": "^5.9.20",
     "moment": "^2.27.0",
     "moment-duration-format": "^2.2.2",
     "canvas": "^2.6.1",
-    "gifencoder": "^2.0.1",
-    "aki-api": "^5.0.0"
+    "gifencoder": "^2.0.1"
   }
 }
