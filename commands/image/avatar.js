@@ -1,12 +1,16 @@
 const { MessageEmbed } = require('discord.js');
 const { color } = require('../../config.js');
 exports.run = async (bot, message, args) => {
+let member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member || message.id;
+if(!message.channel.permissionsFor(message.guild.me).has("EMBED_LINKS")) return message.channel.send(`У меня нету права \`Встраивать ссылки \``);
 
-const user = message.mentions.members.first() || message.member;
-let emb = new MessageEmbed()
-.setTitile("Аватар")
- .setImage(user.avatarURL({dynamic: true, size: 2048}));
-message.channel.send({embed:emb})
+let embed = new MessageEmbed()
+.setDescription(`[${member.user.tag}]("+member.user.avatarURL({dynamic: true, size: 2048})+")`)
+.setImage(member.user.avatarURL({dynamic: true, size: 2048}))
+.setColor(color)
+.setTimestamp();
+
+message.channel.send(embed)
 };
 
 exports.help = {
