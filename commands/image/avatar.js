@@ -2,10 +2,11 @@ const { MessageEmbed } = require('discord.js');
 const { color } = require('../../config.js');
 exports.run = async (bot, message, args) => {
 
-let member = message.mentions.members.first() || message.member;
-let URL = member.avatarURL({dynamic: true, size: 2048});
-const attachment = new MessageAttachment(URL);
-message.channel.send(attachment);
+const user = message.mentions.members.first() || message.member;
+let emb = new MessageEmbed()
+.setTitile("Аватар")
+ .setImage(user.avatarURL({dynamic: true, size: 2048}));
+message.channel.send({embed:emb})
 };
 
 exports.help = {
