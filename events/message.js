@@ -1,4 +1,4 @@
-const { owners, sponsors, prefix} = require('../config.js');
+const { owners, prefix} = require('../config.js');
 const cooldownCache = new Set();
 module.exports = async (bot, message) => {
   
