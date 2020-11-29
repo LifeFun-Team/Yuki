@@ -11,9 +11,8 @@ exports.help = {
   name: 'say',
   aliases: ['echo'],
   info: 'Отправить сообщение от имени бота.',
-  usage: '<text>',
+  usage: 'Текст',
   group: 'util',
   ownerOnly: false,
-  sponsor: false,
   cooldown: 5
 }
