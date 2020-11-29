@@ -5,7 +5,7 @@ let member = message.mentions.members.first() || message.guild.members.cache.get
 if(!message.channel.permissionsFor(message.guild.me).has("EMBED_LINKS")) return message.channel.send(`У меня нету права \`Встраивать ссылки \``);
 
 let embed = new MessageEmbed()
-.setDescription(`[${member.user.tag}]("+member.user.avatarURL({dynamic: true, size: 2048})+")`)
+.setDescription(`[${member.user.tag}](+member.user.avatarURL({dynamic: true, size: 2048})+)`)
 .setImage(member.user.avatarURL({dynamic: true, size: 2048}))
 .setColor(color)
 .setTimestamp();
