@@ -2,7 +2,7 @@ const { MessageEmbed } = require('discord.js');
 const { color } = require('../../config.js');
 exports.run = async (bot, message, args) => {
 
-let member = message.mentions.users.first() || message.author;
+let member = message.mentions.members.first() || message.member;
 let URL = member.user.avatarURL({dynamic: true, size: 2048});
 const attachment = new MessageAttachment(URL);
 message.channel.send(attachment);
