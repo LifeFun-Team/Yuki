@@ -24,6 +24,5 @@ exports.help = {
   usage: '',
   group: 'util',
   ownerOnly: false,
-  sponsor: false,
   cooldown: 10
 }
