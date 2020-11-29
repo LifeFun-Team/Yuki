@@ -3,7 +3,7 @@ const { color } = require('../../config.js');
 exports.run = async (bot, message, args) => {
 
 let member = message.mentions.users.first() || message.author;
-let = member.user.avatarURL({dynamic: true, size: 2048});
+let URL = member.user.avatarURL({dynamic: true, size: 2048});
 const attachment = new MessageAttachment(URL);
 message.channel.send(attachment);
 };
