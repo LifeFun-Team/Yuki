@@ -12,7 +12,7 @@ let member = message.guild.member(message.mentions.users.first());
 const body = await fetch("https://nekos.life/api/v2/img/pat").then(r => r.json()).then(r => r.url);
  const embed = new MessageEmbed()
   .setColor(invisible)
-   .setDescription(`${message.author} похвалил ${member.user}`)
+   .setDescription(`${message.author} похвалил(а) ${member.user}`)
     .setImage(body)
      message.say(embed)
  };
