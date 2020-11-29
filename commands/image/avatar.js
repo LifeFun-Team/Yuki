@@ -20,6 +20,5 @@ exports.help = {
   usage: '@Пользователь',
   group: 'image',
   ownerOnly: false,
-  sponsor: false,
   cooldown: 10
 }
