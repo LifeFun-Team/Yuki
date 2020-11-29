@@ -29,6 +29,5 @@ exports.help = {
   usage: 'Код',
   group: 'owner',
   ownerOnly: true,
-  sponsor: false,
   cooldown: 0
 }
