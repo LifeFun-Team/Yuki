@@ -26,6 +26,5 @@ exports.help = {
   usage: '@Пользователь | Картинка',
   group: 'image',
   ownerOnly: false,
-  sponsor: false,
   cooldown: 10
 }
