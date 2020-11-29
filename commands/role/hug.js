@@ -12,7 +12,7 @@ let member = message.guild.member(message.mentions.users.first());
 const body = await fetch("https://nekos.life/api/v2/img/hug").then(r => r.json()).then(r => r.url);
  const hug = new MessageEmbed()
   .setColor(invisible)
-   .setDescription(`${message.author} обнял ${member.user}`)
+   .setDescription(`${message.author} обнял(а) ${member.user}`)
     .setImage(body)
      message.say(hug)
  };
