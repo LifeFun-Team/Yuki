@@ -3,7 +3,7 @@ const { color } = require('../../config.js');
 
 exports.run = async (bot, message, args) => {
 
-if(!msg.channel.permissionsFor(msg.guild.me).has("EMBED_LINKS")) return msg.channel.send(`У меня нету права \`Встраивать ссылки \``);
+if(!message.channel.permissionsFor(message.guild.me).has("EMBED_LINKS")) return message.channel.send(`У меня нету права \`Встраивать ссылки \``);
   
 const verifilv = {
 "NONE": "`Отсутствует`",
