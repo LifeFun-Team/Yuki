@@ -27,7 +27,7 @@ const { body } = await request.get('https://www.googleapis.com/youtube/v3/search
 				.addField('Дата публикации', moment.utc(data.snippet.publishedAt).format('MM/DD/YYYY h:mm A'), true)
 			return message.channel.send(embed);
 		} catch (err) {
-			return message.channel.send(`Ошыб очка`);
+			return message.channel.send(`Ошыб очка ${err.message}`);
 		}
 }
 
