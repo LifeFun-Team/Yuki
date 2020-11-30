@@ -11,7 +11,7 @@ const { body } = await request.get('https://www.googleapis.com/youtube/v3/search
 					part: 'snippet',
 					type: 'video',
 					maxResults: 1,
-					q: query,
+					q: args[0],
 					safeSearch: msg.channel.nsfw ? 'none' : 'strict',
 					key: GOOGLE_KEY
 				});
