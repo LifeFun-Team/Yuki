@@ -18,7 +18,6 @@
     "moment": "^2.27.0",
     "moment-duration-format": "^2.2.2",
     "canvas": "^2.6.1",
-    "gifencoder": "^2.0.1",
-    "node-superfetch": "^0.1.10"
+    "gifencoder": "^2.0.1"
   }
 }
