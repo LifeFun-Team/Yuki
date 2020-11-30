@@ -1,5 +1,6 @@
 const { MessageEmbed, version } = require('discord.js');
 const { color } = require('../../config.js');
+const { days } = require("../util/functions.js");
 
 exports.run = async (bot, message, args) => {
 
