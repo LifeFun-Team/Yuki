@@ -2,7 +2,7 @@ const { MessageEmbed } = require('discord.js');
 const { color } = require('../../config.js');
 const moment = require('moment');
 const request = require('node-superfetch');
-const { GOOGLE_KEY } = "AIzaSyDoKuBapeMa2wK1kT1IwxfhwaLzUROnjBo";
+const { GOOGLE_KEY } = "AIzaSyDu2PD7U1MC_bABXYnQOYqeu2hiouRfuf4";
 
 exports.run = async (bot, message, args) => {
 
