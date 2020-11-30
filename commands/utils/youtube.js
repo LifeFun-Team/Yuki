@@ -6,12 +6,14 @@ const { GOOGLE_KEY } = "AIzaSyDoKuBapeMa2wK1kT1IwxfhwaLzUROnjBo";
 
 exports.run = async (bot, message, args) => {
 
+const query = args.slice(0).join(" ").replace(/(discord|discordapp)\.(com|gg)\/.*/g, '[INVITE]');
+
 try {
 const { body } = await request.get('https://www.googleapis.com/youtube/v3/search').query({
 					part: 'snippet',
 					type: 'video',
 					maxResults: 1,
-					q: args[0],
+					q: query,
 					safeSearch: message.channel.nsfw ? 'none' : 'strict',
 					key: GOOGLE_KEY
 				});
