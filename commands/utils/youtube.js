@@ -12,7 +12,7 @@ const { body } = await request.get('https://www.googleapis.com/youtube/v3/search
 					type: 'video',
 					maxResults: 1,
 					q: args[0],
-					safeSearch: msg.channel.nsfw ? 'none' : 'strict',
+					safeSearch: message.channel.nsfw ? 'none' : 'strict',
 					key: GOOGLE_KEY
 				});
 			if (!body.items.length) return message.channel.send('Не удалось найти никаких результатов.');
