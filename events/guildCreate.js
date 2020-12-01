@@ -7,7 +7,6 @@ module.exports = async (bot, guild) => {
     .setThumbnail(guild.iconURL({ dynamic: true }))
     .setColor(color)
     .setDescription(`:inbox_tray: Я пришла на **${guild.name}** \`${guild.id}\``)
-    .addField(`Основатель:`, `\`${guild.owner.user.tag}\` \`${guild.owner.user.id}\``)
     .addField(`Участников:`, guild.memberCount, true)
     .addField(`Создан:`, days(guild.createdAt), true)
     if(guild.me.hasPermission("MANAGE_GUILD")){
