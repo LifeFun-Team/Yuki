@@ -7,7 +7,6 @@ module.exports = async (bot, guild) => {
     .setThumbnail(guild.iconURL({ dynamic: true }))
     .setColor(color)
     .setDescription(`:outbox_tray: Я ушла с **${guild.name}** \`${guild.id}\``)
-    .addField(`Основатель:`, `\`${guild.owner.user.tag}\` \`${guild.owner.user.id}\``)
     .addField(`Участников:`, guild.memberCount, true)
     .addField(`Создан:`, days(guild.createdAt), true)
     .setFooter(`Нас стало ${await bot.shard.fetchClientValues('guilds.cache.size').then(r => r.reduce((a,b) => a+b))} серверов!`);
