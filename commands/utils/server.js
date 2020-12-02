@@ -3,14 +3,12 @@ const { color } = require('../../config.js');
 const { days } = require("../../util/functions.js");
 
 exports.run = async (bot, message, args) => {
-
-if(!message.channel.permissionsFor(message.guild.me).has("EMBED_LINKS")) return message.channel.send(`У меня нету права \`Встраивать ссылки \``);
-  
+ 
 const verifilv = {
 "NONE": "`Отсутствует`",
 "LOW":"Низкий",
 "MEDIUM":"Средний",
-"HIGH":"(╯°□°）╯︵ ┻━┻",
+"HIGH":"Высокий",
 "VERY_HIGH":"Очень высокий"};
   
 let region = {
@@ -38,7 +36,6 @@ let chan = message.guild.channels.cache.size;
   
 const embed = new MessageEmbed()
 .setAuthor(`Информация о ${message.guild.name}`)
-.addField(`Владелец`, `${message.guild.owner.user.tag}`)
 .addField(`ID`, `${message.guild.id}`)
 .addField(`Каналов[${chan}]`, `Категорий: ${message.guild.channels.cache.filter(c => c.type == "category").size}\nТекстовых: ${message.guild.channels.cache.filter(c => c.type == "text").size}\nГолосовых: ${message.guild.channels.cache.filter(c => c.type == "voice").size}`)
 .addField(`Участники[${users}]`, `Людей: ${memb}\nБотов: ${bots}`)
