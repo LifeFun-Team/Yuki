@@ -95,9 +95,9 @@ message.channel.send(embed);
   }}
 
 exports.help = {
-  name: 'server',
-  aliases: ['server-info'],
-  info: 'Информация о сервере',
+  name: 'user',
+  aliases: ['user-info'],
+  info: 'Информация о пользователе',
   usage: '',
   group: 'util',
   ownerOnly: false,
