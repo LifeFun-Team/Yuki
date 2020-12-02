@@ -20,7 +20,7 @@ exports.help = {
   aliases: ['love'],
   info: 'Проверка на совместимость',
   usage: '@Пользователь',
-  group: 'fun',
+  group: 'role',
   ownerOnly: false,
   cooldown: 5,
 }
