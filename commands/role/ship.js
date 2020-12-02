@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js');
-const { color } = require('../config.js');
+const { color } = require('../../config.js');
 
 exports.run = async (bot, message, args) => {
 let member = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[0]));
@@ -19,7 +19,7 @@ exports.help = {
   name: 'ship',
   aliases: ['love'],
   info: 'Проверка на совместимость',
-  usage: '<user>',
+  usage: '@Пользователь',
   group: 'fun',
   ownerOnly: false,
   cooldown: 5,
