@@ -92,3 +92,14 @@ embed.setThumbnail(member.displayAvatarURL({dynamic: true}))
 .setFooter(c.footer, bot.user.avatarURL({dynamic: true}))
 .setTimestamp();
 message.channel.send(embed);
+  }}
+
+exports.help = {
+  name: 'server',
+  aliases: ['server-info'],
+  info: 'Информация о сервере',
+  usage: '',
+  group: 'util',
+  ownerOnly: false,
+  cooldown: 10
+}
