@@ -36,6 +36,7 @@ let chan = message.guild.channels.cache.size;
   
 const embed = new MessageEmbed()
 .setAuthor(`Информация о ${message.guild.name}`)
+.addField(`Владелец`, `<:owner:704083855346499676>${message.guild.owner.user.tag}`)
 .addField(`ID`, `${message.guild.id}`)
 .addField(`Каналов[${chan}]`, `Категорий: ${message.guild.channels.cache.filter(c => c.type == "category").size}\nТекстовых: ${message.guild.channels.cache.filter(c => c.type == "text").size}\nГолосовых: ${message.guild.channels.cache.filter(c => c.type == "voice").size}`)
 .addField(`Участники[${users}]`, `Людей: ${memb}\nБотов: ${bots}`)
