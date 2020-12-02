@@ -3,8 +3,9 @@ const { color } = require('../../config.js');
 
 exports.run = async (bot, message, args) => {
 let member = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[0]));
-if(!args[0]) return message.say('Укажите пользователя')
-if(member == message.author.id) return message.say('Ты не можешь шыперить себя с собой')
+if(!args[0]) return message.say('Укажите пользователя.')
+if(member == message.author.id) return message.say('Вы не можете шыперить себя с собой.');
+if(member.user.bot) return message.say("Вы не можете зашыпериться с ботом.");
 if(member == null) return message.say('Пользователь не найден.')
         const love = Math.random() * 100;
         const loveIndex = Math.floor(love / 10);
