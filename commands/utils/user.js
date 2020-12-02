@@ -1,5 +1,5 @@
 const { MessageEmbed, version } = require('discord.js');
-const { color } = require('../../config.js');
+const { color, invisible } = require('../../config.js');
 const { days } = require("../../util/functions.js");
 
 module.exports.run = async (bot, message, args) => {
@@ -66,13 +66,11 @@ const name = `**[${member.user.tag}](https://discord.com/users/${member.id}/)**`
 
 embed.setThumbnail(member.user.displayAvatarURL({dynamic: true}))
 .setDescription(name + badge + "\n" + text + activity)
-.setColor(c.color)
+.setColor(color)
 .addField(`ID:`, `${member.user.id}`)
 .addField(`Зарегистрирован`, `${days(member.user.createdAt)}`)
 .addField(`Присоединился к серверу`, `${days(member.joinedAt)}`)
 .addField(`Роли[${member.roles.cache.size - 1}]`, message.guild.member(member).roles.cache.filter(r => r.id != message.guild.id).sort((a,b) => b.position - a.position).map(role => '<@&'+role.id+'>').join(' ').slice(0, 68) || 'Не имеет')
-.setFooter(c.footer, bot.user.avatarURL({dynamic: true}))
-.setTimestamp();
 message.channel.send(embed);
 
   } else {
@@ -86,11 +84,9 @@ for(const f of flag){badge += `${flags[f]}`}};
 
 embed.setThumbnail(member.displayAvatarURL({dynamic: true}))
 .setDescription(`**[${member.tag}](https://discord.com/users/${member.id}/)**` + "\n" + badge + "\n" + "<a:offline:654748811360600074> Нет на сервере.")
-.setColor(c.ncolor)
+.setColor(invisible)
 .addField(`ID:`, `${member.id}`)
 .addField(`Зарегистрирован`, `${days(member.createdAt)}`)
-.setFooter(c.footer, bot.user.avatarURL({dynamic: true}))
-.setTimestamp();
 message.channel.send(embed);
   }}
 
