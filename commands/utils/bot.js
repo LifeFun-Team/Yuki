@@ -5,6 +5,8 @@ const moment = require(`moment`);
 require(`moment-duration-format`);
 exports.run = async (bot, message, args) => {
   
+  if(!message.channel.permissionsFor(message.guild.me).has("EMBED_LINKS")) return message.channel.send(`У меня нету права \`Встраивать ссылки \``);
+  
   const embed = new MessageEmbed()
   .addField(`Шардов`, `${bot.shard.count.toLocaleString()}`, true)
   .addField(`Серверов`, `${await bot.shard.fetchClientValues('guilds.cache.size').then(r => r.reduce((a,b) => Number(a+b).toLocaleString()))}`, true)
