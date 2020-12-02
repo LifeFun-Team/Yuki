@@ -6,17 +6,19 @@ module.exports.run = async (bot, message, args) => {
   
 const embed = new MessageEmbed();
 const flags = {
-DISCORD_EMPLOYEE: "<:Staff:709147338396139550>",
-DISCORD_PARTNER: "<:Partner:709147309329350747> ",
-HYPESQUAD_EVENTS: "<:HSEvents:709147271467630693> ",
-BUGHUNTER_LEVEL_1: "<:BugHunter:709147223174414408> ",
-HOUSE_BRAVERY: "<:HSBravery:707292173586006086> ",
-HOUSE_BRILLIANCE: "<:HSBrilliance:707292201683779694> ",
-HOUSE_BALANCE: "<:HSBalance:707292145488494633> ",
-EARLY_SUPPORTER: "<:EarlySupporter:709142528930087003> ",
-BUGHUNTER_LEVEL_2: "<:BugHunter2:709147236545855528> ",
-VERIFIED_BOT: "<:Verifid:710494835584401409> ",
-VERIFIED_DEVELOPER: "<:Coder:707292254129225739> "};
+DISCORD_EMPLOYEE: "",
+DISCORD_PARTNER: "",
+HYPESQUAD_EVENTS: "",
+BUGHUNTER_LEVEL_1: "",
+HOUSE_BRAVERY: "",
+HOUSE_BRILLIANCE: "",
+HOUSE_BALANCE: "",
+EARLY_SUPPORTER: "",
+TEAM_USER: "",
+SYSTEM: "",
+BUGHUNTER_LEVEL_2: "",
+VERIFIED_BOT: "",
+VERIFIED_DEVELOPER: ""};
   
 let member = message.mentions.members.first() || message.guild.members.cache.get(args.join(' '));
 if(!args.join('')) member = message.member;
