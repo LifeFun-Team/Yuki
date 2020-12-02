@@ -2,7 +2,6 @@ const { MessageEmbed } = require('discord.js');
 const { owners, color, prefix} = require('../../config.js');
 const { owner } = require('../../structures/emotes');
 exports.run = async (bot, message, args) => {
-   if(!message.channel.permissionsFor(message.guild.me).has("EMBED_LINKS")) return message.channel.send(`У меня нету права \`Встраивать ссылки \``);
   function list(group) {
             return bot.commands.filter(c => c.help.group == group).map(c => `\`${c.help.name}\``).join(", ");
         }
