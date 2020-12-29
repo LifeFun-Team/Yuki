@@ -4,8 +4,8 @@ const { readdir, readdirSync } = require("fs");
 const bot = new Client({ allowedMentions: {parse: []} });
 bot.options.ws.properties.$browser = "Discord Android";
 
-mongoose.connect("mongodb+srv://dope:duck3322@yukibd-d7dl4.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
-mongoose.connection.on('connected',()=>{console.log("[MongoDB] Подключено!")});
+//mongoose.connect("mongodb+srv://dope:duck3322@yukibd-d7dl4.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
+//mongoose.connection.on('connected',()=>{console.log("[MongoDB] Подключено!")});
 
 bot.games = new Collection();
 
