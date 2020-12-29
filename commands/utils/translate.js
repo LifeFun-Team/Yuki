@@ -25,7 +25,7 @@ exports.run = async (bot, message, args) => {
     translate.translate(text, {to: args[0]}, function(err, res) {message.channel.send(new MessageEmbed()
   .setTitle(`<:translate:708296135571406918> Переведено на ${lang[args[0]]}`)
   .setDescription(`\`\`\`${res.text}\`\`\``)
-  .setColor(color);
+  .setColor(color))});
   
 }
 
