@@ -1,5 +1,5 @@
 const translate = require('yandex-translate')(`trnsl.1.1.20200507T172732Z.386e968c7a456a10.4910aaa787dedccf8627a4b7f28d5c1d774f98f7`);
-module.exports.run = (bot, msg, args) => {
+exports.run = async (bot, message, args) => {
   
   if(!msg.channel.permissionsFor(msg.guild.me).has("EMBED_LINKS")) return msg.channel.send(`У меня нету права \`Встраивать ссылки \``);
   if(!args[1]) return succ(`Нужно указать язык и текст для перевода.`)
@@ -29,7 +29,3 @@ module.exports.run = (bot, msg, args) => {
   .setTimestamp())}); 
   
 }
-
-module.exports.help = {
-  name: ["translate", "t"]
-};
