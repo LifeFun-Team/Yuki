@@ -2,8 +2,8 @@ const { owners, prefix} = require('../config.js');
 const cooldownCache = new Set();
 module.exports = async (bot, message) => {
   
-  let data = await guild.findOne({guildID:message.guild.id});
-  if(!data){let a = new guild({guildID: message.guild.id}); a.save()}
+  //let data = await guild.findOne({guildID:message.guild.id});
+  //if(!data){let a = new guild({guildID: message.guild.id}); a.save()}
   
   if(!message.guild||message.author.bot) return;
   if(!message.content.startsWith(prefix)) return;
