@@ -36,5 +36,5 @@ exports.help = {
   usage: 'ru/en/uk/fr/bg/es/tr/it/de',
   group: 'util',
   ownerOnly: false,
-  cooldown: 25
+  cooldown: 5
 }
