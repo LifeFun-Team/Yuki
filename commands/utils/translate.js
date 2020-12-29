@@ -23,7 +23,7 @@ exports.run = async (bot, message, args) => {
   if(!langs.includes(language)) {return message.channel.send(`Языка \`${args[0]}\` не существует`)}
   
     translate.translate(text, {to: args[0]}, function(err, res) {message.channel.send(new MessageEmbed()
-  .setTitle(`<:translate:708296135571406918> Переведено на ${lang[args[0]]}`)
+  .setTitle(`Переведено на ${lang[args[0]]}`)
   .setDescription(`\`\`\`${res.text}\`\`\``)
   .setColor(color))});
   
