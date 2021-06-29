@@ -29,9 +29,6 @@ let region = {
 "russia": ":flag_ru: Россия",
 "southafrica": ":flag_za: Южная Африка"};
   
-let users = message.guild.memberCount;
-let memb = message.guild.members.cache.filter(x => !x.user.bot).size
-let bots = message.guild.members.cache.filter(mem => mem.user.bot === true).size;
 let chan = message.guild.channels.cache.size;
   
 const embed = new MessageEmbed()
@@ -39,7 +36,6 @@ const embed = new MessageEmbed()
 .addField(`Владелец`, `<:owner:704083855346499676>${message.guild.owner.user.tag}`)
 .addField(`ID`, `${message.guild.id}`)
 .addField(`Каналов[${chan}]`, `Категорий: ${message.guild.channels.cache.filter(c => c.type == "category").size}\nТекстовых: ${message.guild.channels.cache.filter(c => c.type == "text").size}\nГолосовых: ${message.guild.channels.cache.filter(c => c.type == "voice").size}`)
-.addField(`Участники[${users}]`, `Людей: ${memb}\nБотов: ${bots}`)
 .addField(`Прочее`, `Ролей: ${message.guild.roles.cache.size - 1}\nЭмодзи: ${message.guild.emojis.cache.size}`)
 .addField(`Регион`, region[message.guild.region])
 .addField(`Уровень проверки`, verifilv[message.guild.verificationLevel])
