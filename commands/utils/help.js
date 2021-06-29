@@ -3,7 +3,7 @@ const { owners, color, prefix} = require('../../config.js');
 const { owner } = require('../../structures/emotes');
 exports.run = async (bot, message, args) => {
   function list(group) {
-            return bot.commands.filter(c => c.help.group == group).map(c => `\`${c.help.name}\``).join(", ");
+            return bot.commands.filter(c => c.help.group == group).map(c => `${c.help.name}`).join(", ");
         }
 if(!args[0]) {
   const embed = new MessageEmbed()
