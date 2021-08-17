@@ -4,9 +4,6 @@ const { readdir, readdirSync } = require("fs");
 const bot = new Client({ allowedMentions: {parse: []} });
 bot.options.ws.properties.$browser = "Discord Android";
 
-//mongoose.connect("mongodb+srv://dope:duck3322@yukibd-d7dl4.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
-//mongoose.connection.on('connected',()=>{console.log("[MongoDB] Подключено!")});
-
 bot.games = new Collection();
 
 // Загрузка ивентов
@@ -33,7 +30,7 @@ const webhookClient = new WebhookClient('726133106309988412', 'mu0adEMW-0M_Qz_or
 let embed = new MessageEmbed()
 .setColor("#d7342a")
 .addField(`**Название:**`, `\`${error.name}\``, true)
-.addField(`**Откуда:**`, `\`${error.path || 'xz'}\``, true)
+.addField(`**Откуда:**`, `\`${error.path || 'Неизвестно'}\``, true)
 .addField(`**Трейс:**`,  `\`\`\`js\n${error.stack.slice(0, 1000)}\`\`\``)
 webhookClient.send(embed)
 }) 
