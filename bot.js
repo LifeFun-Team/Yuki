@@ -26,7 +26,7 @@ bot.commands = new Collection();
 		})
 
 process.on('unhandledRejection', error => {
-const webhookClient = new WebhookClient('726133106309988412', 'mu0adEMW-0M_Qz_orGAsbzr4-iETdxQy8vkPwPDHmQvnJbeN70A3lAyHzisu2jbjCQTS');
+const webhookClient = new WebhookClient('webhookId', 'webhookToken');
 let embed = new MessageEmbed()
 .setColor("#d7342a")
 .addField(`**Название:**`, `\`${error.name}\``, true)
